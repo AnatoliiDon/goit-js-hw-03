@@ -1,10 +1,10 @@
-function makeTransaction(quantity, pricePerDroid) {
-  const result = `You ordered ${quantity} droids worth ${
-    quantity * pricePerDroid
-  } credits!`;
-  return result;
+function slugify(title) {
+  const lowerTitle = title.toLowerCase();
+  const arrayTitle = lowerTitle.split(' ');
+  const slug = arrayTitle.join('-');
+  return slug;
 }
-console.log(makeTransaction(5, 3000));
-console.log(makeTransaction(3, 1000));
-console.log(makeTransaction(10, 500));
-console.log(makeTransaction(15, 10000));
+console.log(slugify('Arrays for begginers')); // "arrays-for-begginers"
+console.log(slugify('English for developer')); // "english-for-developer"
+console.log(slugify('Ten secrets of JavaScript')); // "ten-secrets-of-javascript"
+console.log(slugify('How to become a JUNIOR developer in TWO WEEKS')); // "how-to-become-a-junior-developer-in-two-weeks"
